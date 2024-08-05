@@ -15,3 +15,34 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
+chmod +x $scripts_path/common-configurations.sh
+$scripts_path/common-configurations.sh
+if [ $? -ne 0 ]; then
+  echo "Something went wrong while applying common configurations..."
+  exit 1
+fi
+
+chmod +x $scripts_path/vm-configurations.sh
+$scripts_path/vm-configurations.sh
+if [ $? -ne 0 ]; then
+  echo "Something went wrong while applying vm configurations..."
+  exit 1
+fi
+
+chmod +x $scripts_path/git-configurations.sh
+$scripts_path/git-configurations.sh
+if [ $? -ne 0 ]; then
+  echo "Something went wrong while applying git configurations..."
+  exit 1
+fi
+
+clear
+echo "Creating Symlinks with Gnu Stow for user $(whoami)..."
+cd $dotfiles_path
+stow .
+
+read -p "Do you want to apply the dotfiles for the root user? y/n"
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  sudo stow . -t /root/
+fi
+
