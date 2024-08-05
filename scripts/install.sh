@@ -8,8 +8,8 @@ if [ ! -d $dotfiles_path ]; then
   exit 1
 fi
 
-chmod +x $scripts_path/install_dependencies.sh
-$scripts_path/install_dependencies.sh
+chmod +x $scripts_path/install-dependencies.sh
+$scripts_path/install-dependencies.sh
 if [ $? -ne 0 ]; then
   echo "Something went wrong while installing dependencies..."
   exit 1

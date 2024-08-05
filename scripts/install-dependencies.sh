@@ -2,9 +2,14 @@ clear
 echo "Installing dependencies with pacman..."
 sudo pacman -Syu git stow firefox neovim \
   wl-clipboard unzip curl pass \
-  zhs fzf bat zoxide eze tmux \
+  zsh fzf bat zoxide eza tmux \
   alacritty hyprpaper \
   open-vm-tools
+
+if [[ $? -ne 0 ]]; then 
+  echo "Couldn't install the dependencies..."
+  exit 1
+fi
 
 clear
 echo "Checking if yay is installed..."
