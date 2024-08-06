@@ -8,8 +8,8 @@ if [ ! -d $dotfiles_path ]; then
   exit 1
 fi
 
-chmod +x $scripts_path/install_dependencies.sh
-$scripts_path/install_dependencies.sh
+chmod +x $scripts_path/install-dependencies.sh
+$scripts_path/install-dependencies.sh
 if [ $? -ne 0 ]; then
   echo "Something went wrong while installing dependencies..."
   exit 1
@@ -37,6 +37,10 @@ if [ $? -ne 0 ]; then
 fi
 
 clear
+echo "Cloning Nvim configuration..."
+git clone https://github.com/Aaron70/dotfiles.git ~/dotfiles/.config/nvim
+
+clear
 echo "Creating Symlinks with Gnu Stow for user $(whoami)..."
 cd $dotfiles_path
 stow .
@@ -45,4 +49,3 @@ read -p "Do you want to apply the dotfiles for the root user? y/n"
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   sudo stow . -t /root/
 fi
-
