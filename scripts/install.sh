@@ -40,6 +40,7 @@ clear
 echo "Cloning Nvim configuration..."
 git clone https://github.com/Aaron70/nvim.git ~/dotfiles/.config/nvim
 
+
 clear
 echo "Creating Symlinks with Gnu Stow for user $(whoami)..."
 cd $dotfiles_path
