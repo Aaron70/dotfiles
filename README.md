@@ -15,20 +15,19 @@ chmod +x scripts/install.sh
 ./scripts/install.sh
 ```
 
-> This repo uses [GNU Stow](https://www.gnu.org/software/stow/) to create symlinks for the configuration files, so this repository must be cloned into the _**home**_ directory.
+> This repo uses [GNU Stow](https://www.gnu.org/software/stow/) to create symlinks for the configuration files, so this repository must be cloned into the _**home**_ directory of your user `~`.
 
 
 ## Branch structure 
 
-The `master` branch might not have the latest changes but instead each branch for its respective OS configuration. 
-
 You’ll find some branches with the following form `os/*`. Each branch contains its OS specific configurations. Since I use Arch (BTW) the branches `os/archlinux` and `os/windows` will contain the configurations for **ArchLinux** and **Windows** respectively.
+Those branches prefixed with `os/vm-` means that has been tested in a virtual machine. 
 
 ##  Dotfiles configurations 
 
 This section describes the different dotfiles configurations that will be installed after the running the installation script.
 
-### Window Manager (delete this for the windows branch)
+### Window Manager
 
 Currently the configured tiling window manager is [_Hyprland_](https://hyprland.org/). You’ll find the configurations files for hyprland under `.config/hypr`.
 
@@ -79,7 +78,6 @@ Then you can add the following line into your shell file to apply it:
 eval "$(oh-my-posh init zsh --config ~/ohmyposh/zen.toml)"
 ```
 
-
 ### Tmux
 
 I use [Tmux](https://github.com/tmux/tmux) to make my developtment workflow more comfortable. As a plugin manager for Tmux I use [tmp](https://github.com/tmux-plugins/tpm) so make sure to follow his installation instructions.  
@@ -87,11 +85,5 @@ I use [Tmux](https://github.com/tmux/tmux) to make my developtment workflow more
 ### Editor
 
 My favorite editor is neovim which its configuration is in another repository.
-You can find it [here](add the link), this repo will clone the respective os branch from the vim configuration repo.
-
-
-==TODO: Move to Nvim repo==
-As favorite editor I use [Neovim](https://neovim.io/) (BTW) and more specifically [Nvchad](https://nvchad.com/) as starting point for the configuration.
-
-
+You can find it [here](https://github.com/aaron70/nvim), this repo will clone the respective branch from the vim configuration repo.
 
