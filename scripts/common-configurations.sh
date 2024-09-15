@@ -1,5 +1,5 @@
 clear
-echo "Writing env variables for VM..."
+echo "Writing env variables for common configuration..."
 sudo bash -c "echo -e \"$(cat /etc/environment)\n\n# Arch dotfiles env variables \n$(cat $scripts_path/.env-common)\" > /etc/environment" 
 if [ $? -ne 0 ]; then
   echo "Couldn't write the env variables..."

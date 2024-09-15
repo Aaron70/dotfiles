@@ -1,5 +1,6 @@
 # Path 
 export PATH=$PATH:$HOME/go/bin/
+
 # Set the dierctory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -79,6 +80,7 @@ eval "$(zoxide init --cmd cd zsh)"
 #     exec tmux new-session -A -s ${USER} >/dev/null 2>&1
 # fi
 
+~/.config/zsh/run-tmux-automatically.sh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

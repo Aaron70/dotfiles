@@ -46,6 +46,8 @@ echo "Creating Symlinks with Gnu Stow for user $(whoami)..."
 cd $dotfiles_path
 stow .
 
+chmod +x ~/.config/zsh/run-tmux-automatically.sh
+
 read -p "Do you want to apply the dotfiles for the root user? y/n"
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   sudo stow . -t /root/
