@@ -1,6 +1,6 @@
 clear
 echo "Installing dependencies with pacman..."
-sudo pacman -Syu git stow firefox neovim docker \
+sudo pacman -Syu git stow firefox qutebrowser neovim docker \
   wl-clipboard unzip curl pass qt5-wayland qt6-wayland wofi \
   zsh fzf bat zoxide eza tmux \
   alacritty hyprpaper \

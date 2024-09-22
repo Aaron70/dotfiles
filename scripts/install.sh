@@ -38,7 +38,7 @@ fi
 
 clear
 echo "Cloning Nvim configuration..."
-git clone https://github.com/Aaron70/nvim.git ~/dotfiles/.config/nvim
+git clone -b personal https://github.com/Aaron70/kickstart.nvim.git ~/dotfiles/.config/nvim
 
 
 clear
