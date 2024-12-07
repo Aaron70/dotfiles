@@ -30,5 +30,8 @@ fi
 read -p "continue"
 clear
 
+mkdir -p ~/.config/backup
+mv ~/.config/hypr ~/.config/backup/hypr
+
 cd $DOTFILES
 stow .

@@ -31,7 +31,7 @@ if [[ -z $DOTFILES ]]; then
 fi
 
 if [[ ! -d "$DOTFILES" ]]; then
-  git clone https://github.com/aaron70/dotfiles -b archlinux/terminal $DOTFILES
+  git clone https://github.com/aaron70/dotfiles -b os/archlinux-vm $DOTFILES
   clear
 fi
 
@@ -47,10 +47,4 @@ sudo bash -c "cat $tmp/env >> /etc/environment"
 
 source /etc/environment
 $INSTALLATION_SCRIPTS/apply.sh
-
-#echo "Setup completed!"
-#echo "Run the following commands to apply the dotfiles configuration:"
-#echo ""
-#echo "source /etc/environment"
-#echo "$INSTALLATION_SCRIPTS/apply.sh"
 

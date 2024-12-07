@@ -6,6 +6,7 @@ if [[ -z $INSTALLATION_SCRIPTS ]]; then
   exit 1
 fi
 
+echo "Updating the system..."
 sudo pacman -Syu
 
 echo "Intalling required packages..."

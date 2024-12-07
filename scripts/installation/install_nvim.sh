@@ -7,4 +7,8 @@ if [[ -z $DOTFILES ]]; then
 fi
 
 echo "Cloning Nvim configuration..."
-git clone -b personal https://github.com/Aaron70/kickstart.nvim.git $DOTFILES/.config/nvim
+if [[ ! -d $DOTFILES/.config/nvim ]]; then
+  git clone -b personal https://github.com/Aaron70/kickstart.nvim.git $DOTFILES/.config/nvim
+else
+  echo "Nvim configuration already exists..."
+fi

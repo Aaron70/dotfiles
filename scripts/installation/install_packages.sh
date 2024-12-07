@@ -20,6 +20,13 @@ installer_packages=(
   "qt5-wayland"
   "qt6-wayland"
   "xdg-desktop-portal-hyprland"
+  "fuse2"
+  "gtk4"
+  "libadwaita"
+  "jq"
+  "python-gobject"
+# VM
+  "open-vm-tools"
 # Commands
  # Rust Cargo
   "zoxide" 
@@ -45,7 +52,9 @@ installer_packages=(
 )
 
 installer_yay=(
+  "wlogout" 
   "oh-my-posh"
+  "jlink"
 )
 
 _isInstalled() {
