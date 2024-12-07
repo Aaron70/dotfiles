@@ -2,8 +2,6 @@
 
 installer_packages=(
 # Essentials
-  "qt5-wayland"
-  "qt6-wayland"
   "base-devel"
   "wl-clipboard"
   "git"
@@ -11,6 +9,17 @@ installer_packages=(
   "stow"
   "wget"
   "unzip"
+# Desktop
+  "dunst"
+  "hyprland"
+  "hyprlock"
+  "hyprpaper"
+  "thunar"
+  "rofi-wayland"
+  "waybar"
+  "qt5-wayland"
+  "qt6-wayland"
+  "xdg-desktop-portal-hyprland"
 # Commands
  # Rust Cargo
   "zoxide" 
